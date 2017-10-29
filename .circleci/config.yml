@@ -81,6 +81,44 @@ jobs:
                 name: run unit tests
                 command: composer -n unit-test
 
+
+    # config.yml file.
+    lighthouse:
+        docker:
+            - image: quay.io/stevector/pantheon-ci-testing:master
+        working_directory: ~/example_wordpress_composer
+        steps:
+            - checkout
+            - run:
+                name: dependencies
+                # todo, get this file into something upstream.
+                command: ./.circleci/set-up-global-vars.sh
+
+            - run:
+                name: install lighthouse-ci
+                command: |
+                  cd .circleci
+                  git clone https://github.com/stevector/lighthouse-ci
+                  cd lighthouse-ci/frontend
+                  yarn install
+                  cp no_pwa.js /tmp/artifacts/
+            - run:
+                name: lighthouse
+                command: |
+                  cd /tmp/artifacts
+                  echo $PANTHEON_SITE_URL
+                  echo $TERMINUS_ENV
+                  lighthouse --chrome-flags="--headless --disable-gpu" "https://${TERMINUS_ENV}-${TERMINUS_SITE}.pantheonsite.io" --save-artifacts --save-assets --config-path=no_pwa.js --output=json --output=html
+            - run:
+                name: report results
+                command: |
+                  cd .circleci/lighthouse-ci/frontend
+                  node pass_fail_pr.js --resultspath=$(find /tmp/artifacts/ -type f -name "*report.json" | head -n 1) --reporturl=${CIRCLE_ARTIFACTS_URL}/$(find /tmp/artifacts/ -type f -name "*report.html"  -exec basename {} \;  | head -n 1)
+            - store_artifacts:
+                path: /tmp/artifacts
+                destination: artifacts
+
+
     build_deploy_and_test:
         <<: *defaults
         steps:
@@ -110,9 +148,9 @@ jobs:
                 command: ./.circleci/scripts/pantheon/02-init-site-under-test-clone-existing
                 # command: ./.circleci/scripts/pantheon/02-init-site-under-test-reinstall-new
 
-            - run:
-                name: run functional tests with Behat
-                command: ./tests/scripts/run-behat
+############            - run:
+############                name: run functional tests with Behat
+############                command: ./tests/scripts/run-behat
 
             - run:
                 name: post-test actions
@@ -138,3 +176,6 @@ workflows:
       - build
       # Build deploy and test on target platform
       - build_deploy_and_test
+      - lighthouse:
+          requires:
+            - build_deploy_and_test
