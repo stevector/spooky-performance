@@ -1,0 +1,17 @@
+uuid: 7e213c88-e1b0-48e5-9000-81cb0a7e7667
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Phobia
+type: phobia
+description: 'A fear of something'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
