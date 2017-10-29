@@ -1,0 +1,38 @@
+uuid: 9b5a4054-186f-4c48-9af7-b673ad72b3a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.phobia.field_definition
+    - field.field.node.phobia.field_ref_artwork
+    - node.type.phobia
+  module:
+    - user
+id: node.phobia.default
+targetEntityType: node
+bundle: phobia
+mode: default
+content:
+  field_definition:
+    weight: 101
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ref_artwork:
+    weight: 102
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

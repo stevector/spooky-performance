@@ -1,0 +1,29 @@
+uuid: 18bb8a0d-a4fc-4ea3-8c80-541e3a1d388c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.artwork.field_image
+    - field.field.node.artwork.field_link
+    - node.type.artwork
+  module:
+    - image
+    - user
+id: node.artwork.teaser
+targetEntityType: node
+bundle: artwork
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_link: true
+  links: true

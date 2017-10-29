@@ -1,0 +1,18 @@
+uuid: 19dfab70-1f2c-45d7-830e-f240428b845e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.phobia
+  module:
+    - user
+id: node.phobia.teaser
+targetEntityType: node
+bundle: phobia
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

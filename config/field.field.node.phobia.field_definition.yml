@@ -1,0 +1,19 @@
+uuid: cf66c990-9519-418b-893b-178eea896c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_definition
+    - node.type.phobia
+id: node.phobia.field_definition
+field_name: field_definition
+entity_type: node
+bundle: phobia
+label: Definition
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
