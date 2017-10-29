@@ -1,0 +1,28 @@
+uuid: 2252fc42-14ca-4a42-89e1-22b6b7978a5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.node_type_b.body
+    - node.type.node_type_b
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: WiOnJwWaTFUclpxrMrK0Rz1KemAZSMvSCPoGTissEGU
+id: node.node_type_b.default
+targetEntityType: node
+bundle: node_type_b
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }
