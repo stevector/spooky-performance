@@ -1,0 +1,14 @@
+uuid: 0cfc3e2f-d3fd-4fea-bc60-79c9ca6d2969
+name: spooky-performance
+mail: steve.persch@pantheon.io
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
