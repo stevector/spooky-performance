@@ -1,0 +1,22 @@
+uuid: f28a4199-a5ca-47cb-8e41-61e2da95fbe0
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - spooky
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: spooky_help
+theme: spooky
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
