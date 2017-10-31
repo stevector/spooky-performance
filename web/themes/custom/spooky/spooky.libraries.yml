@@ -1,0 +1,12 @@
+global-styling:
+  css:
+    base:
+      css/style.css: {}
+      css/spoooooooooooooooooooooooooooooooky.css: {}
+  js:
+    js/cookie-monster.js: {}
+artwork-content-type:
+  css:
+    component:
+      css/style.css: {}
+      css/css-that-should-only-be-used-on-the-artwork-content-type--not-globally.css: {}

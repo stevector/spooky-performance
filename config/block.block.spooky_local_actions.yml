@@ -1,0 +1,20 @@
+uuid: 6db0a1e3-703a-4af0-8860-be064ad38a03
+langcode: en
+status: true
+dependencies:
+  theme:
+    - spooky
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: spooky_local_actions
+theme: spooky
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
