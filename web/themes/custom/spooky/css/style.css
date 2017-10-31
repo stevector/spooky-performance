@@ -1,0 +1,16 @@
+header#header {
+    background: #ff9a00;
+}
+
+footer.site-footer {
+    background:  #c900ff;
+}
+
+body {
+    background: #fbfaf4;
+}
+/*
+.node--view-mode-teaser h2 a {
+    color: #09ff00;
+}
+*/
