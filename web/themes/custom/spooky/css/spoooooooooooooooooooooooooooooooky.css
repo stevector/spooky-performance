@@ -1556,3 +1556,8 @@
     padding-top: 0.7em;
 }
 
+.node--view-mode-teaser {
+    border-bottom: none;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}

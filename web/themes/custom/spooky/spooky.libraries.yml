@@ -3,3 +3,8 @@ global-styling:
     component:
       css/style.css: {}
       css/spoooooooooooooooooooooooooooooooky.css: {}
+artwork-content-type:
+  css:
+    component:
+      css/style.css: {}
+      css/css-that-should-only-be-used-on-the-artwork-content-type--not-globally.css: {}
