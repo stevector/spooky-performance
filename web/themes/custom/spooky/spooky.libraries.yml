@@ -1,8 +1,10 @@
 global-styling:
   css:
-    component:
+    base:
       css/style.css: {}
       css/spoooooooooooooooooooooooooooooooky.css: {}
+  js:
+    js/cookie-monster.js: {}
 artwork-content-type:
   css:
     component:
