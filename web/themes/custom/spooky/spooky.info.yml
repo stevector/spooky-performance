@@ -5,6 +5,8 @@ description: 'Spooooooooky performance'
 package: Core
 version: VERSION
 core: 8.x
+libraries:
+  - spooky/global-styling
 regions:
   header: Header
   primary_menu: 'Primary menu'
