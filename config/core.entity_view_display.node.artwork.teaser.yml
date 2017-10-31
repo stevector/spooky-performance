@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.artwork.field_image
     - field.field.node.artwork.field_link
+    - image.style.large
     - node.type.artwork
   module:
     - image
@@ -21,7 +22,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: content
     third_party_settings: {  }
 hidden:
