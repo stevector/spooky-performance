@@ -12,6 +12,7 @@ Feature: Content
 #    When I am viewing an "article" content with the title "My article"
 #    Then I should see the heading "My article"
 
+
   @api
   Scenario: Create many nodes
     Given "page" content:
