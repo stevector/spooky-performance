@@ -13,7 +13,6 @@ Feature: Content
 #    Then I should see the heading "My article"
 
 
-
   @api
   Scenario: Create many nodes
     Given "page" content:
