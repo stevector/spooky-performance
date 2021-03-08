@@ -1,0 +1,22 @@
+uuid: 80ff1bdf-e845-4918-8c6a-cb048c931be1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - spooky
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: spooky_breadcrumbs
+theme: spooky
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

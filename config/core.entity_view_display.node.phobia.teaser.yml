@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.phobia.field_definition
+    - field.field.node.phobia.field_ref_artwork
     - node.type.phobia
   module:
     - user
@@ -12,7 +14,22 @@ targetEntityType: node
 bundle: phobia
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_definition:
+    type: string
+    weight: 0
     region: content
-hidden: {  }
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ref_artwork:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+hidden:
+  links: true

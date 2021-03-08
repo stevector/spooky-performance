@@ -1,0 +1,22 @@
+uuid: da6a594d-1a18-42c8-896e-69cbaabab9ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - spooky
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: spooky_search
+theme: spooky
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }
